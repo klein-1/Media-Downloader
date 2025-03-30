@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #336699;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        .feature-card {
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature-card i {
+            font-size: 3em;
+            color: #336699;
+            margin-bottom: 10px;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            flex-grow: 1;
+        }
+        .search-container button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #336699;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        .step {
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .step-number {
+            font-size: 2em;
+            color: #336699;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Video Downloader</h1>
+        <p class="subtitle">Download your favorite videos with ease.</p>
+
+        <form action="/download" method="post" class="search-container">
+            <input type="text" name="url" placeholder="Paste video link here..." required>
+            <button type="submit">Download Now</button>
+        </form>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Download</h3>
+                <p>Lightning-fast video downloads</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>High Quality</h3>
+                <p>Best available video quality</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safe & Secure</h3>
+                <p>100% safe downloading process</p>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <p>Copy the video URL</p>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <p>Paste it in the box above</p>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <p>Click Download and enjoy!</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Created by Lz</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
