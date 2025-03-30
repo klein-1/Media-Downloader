@@ -1,0 +1,10 @@
+[project]
+name = "media-downloader"
+version = "0.1.0"
+description = "Download any youtube or Instagram vedio you want"
+authors = ["Klein aka Lz"]
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.0",
+    "yt-dlp>=2025.3.27",
+]
