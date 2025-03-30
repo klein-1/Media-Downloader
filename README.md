@@ -3,7 +3,7 @@
 
 A sleek and powerful web application built with Flask that allows you to download videos from various platforms with ease.
 
-![Video Downloader](https://imgur.com/a/qb3QeLM)
+![Video Downloader](https://imgur.com/a/video-downloader-by-lz-qb3QeLM)
 
 ## ✨ Features
 
